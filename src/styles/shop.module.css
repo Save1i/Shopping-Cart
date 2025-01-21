@@ -1,0 +1,11 @@
+.shop {
+  width: 1169px;
+  margin: 0 auto;
+}
+
+.shop__inner {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 24px;
+}

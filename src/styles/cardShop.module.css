@@ -1,0 +1,19 @@
+.card {
+  width: 273px;
+  height: 433px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__img {
+  height: 200px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.card__title {
+}
+
+.card__price {
+}

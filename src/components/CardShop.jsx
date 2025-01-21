@@ -1,4 +1,6 @@
-import { useCard } from "./useCard";
+import { useCard } from "../hooks/useCard";
+import styles from "../styles/cardShop.module.css";
+import { AddToCartBtn } from "./AddToCartBtn";
 
 export const CardShop = ({ url }) => {
   const { products, error, loading } = useCard(url);
@@ -7,22 +9,23 @@ export const CardShop = ({ url }) => {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <div>
+    <>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-    </div>
+    </>
   );
 };
 
 const ProductCard = ({ product }) => {
-  const { title, price, image } = product;
+  const { title, price, image, id } = product;
 
   return (
-    <div>
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p>{price}</p>
+    <div className={styles.card}>
+      <img className={styles.card__img} src={image} alt={title} />
+      <h2 className={styles.card__title}>{title}</h2>
+      <p className={styles.card__price}>{price}</p>
+      <AddToCartBtn id={id} />
     </div>
   );
 };

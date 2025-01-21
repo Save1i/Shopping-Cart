@@ -1,9 +1,15 @@
 import "./App.css";
+import { Navbar } from "./components/NavBar";
 
-import { CardShop } from "./components/CardShop";
+import { Shop } from "./components/Shop";
 
 function App() {
-  return <CardShop url={"https://fakestoreapi.com/products/1"} />;
+  return (
+    <>
+      <Navbar />
+      <Shop url={"https://fakestoreapi.com/products"} />;
+    </>
+  );
 }
 
 export default App;

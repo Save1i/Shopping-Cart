@@ -1,19 +1,12 @@
-import { useImageURL } from "../hooks/useImageURL";
+import { CardShop } from "./CardShop";
+import styles from "../styles/shop.module.css";
 
-export const Shop = () => {
-  const { imageURLs, loading, error } = useImageURL(
-    "https://fakestoreapi.com/products/10",
-    "image"
-  );
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>A network error was encountered</p>;
-
+export const Shop = ({ url }) => {
   return (
-    <>
-      {imageURLs.map((imageURL, index) => (
-        <img key={index} src={imageURL} alt={`Product ${index + 1}`} />
-      ))}
-    </>
+    <div className={styles.shop}>
+      <div className={styles.shop__inner}>
+        <CardShop url={url} />
+      </div>
+    </div>
   );
 };
