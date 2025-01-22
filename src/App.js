@@ -1,15 +1,12 @@
-import "./App.css";
-import { Navbar } from "./components/NavBar";
+import React from "react";
+import { Navbar } from "./components/NavBar"; // Импорт Navbar
+import { Shop } from "./components/Shop"; // Импорт Shop
 
-import { Shop } from "./components/Shop";
-
-function App() {
+export default function App() {
   return (
-    <>
+    <div>
       <Navbar />
-      <Shop url={"https://fakestoreapi.com/products"} />;
-    </>
+      <Shop url={"https://fakestoreapi.com/products"} />
+    </div>
   );
 }
-
-export default App;
