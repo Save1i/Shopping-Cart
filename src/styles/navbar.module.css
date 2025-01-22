@@ -1,0 +1,9 @@
+.navbar {
+  width: 1169px;
+  margin: 0 auto;
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+}
