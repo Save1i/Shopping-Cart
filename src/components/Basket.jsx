@@ -1,20 +1,24 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useCart } from "../hooks/CartContext";
-import { CardShop } from "./CardShop";
 import { Navbar } from "./NavBar";
+import { CardBasket } from "./CardBasket";
+import { DefaultBasket } from "./DefaultBasket";
 
 export const Basket = () => {
   const { state } = useCart();
+
   return (
     <div>
       <Navbar />
-      <div>
-        {state.items.map((id, index) => (
-          <CardShop url={`https://fakestoreapi.com/products/${id}`} />
-        ))}
-      </div>
-
-      <Link to="/"> go to shop</Link>
+      {Object.entries(state.items).length !== 0 ? (
+        <div>
+          {Object.entries(state.items).map(([id, qty]) => (
+            <CardBasket key={id} url={`https://api.escuelajs.co/api/v1/products/${id}`} qty={qty} />
+          ))}
+        </div>
+      ) : (
+        <DefaultBasket />
+      )}
     </div>
   );
 };
