@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 export const BasketIcon = () => {
   const { state } = useCart();
-  console.log(state);
+  console.log(Object.values(state.items));
+  const arr = Object.values(state.items);
+  let sumArr = null;
+  if (arr.length > 0) {
+    sumArr = arr.reduce((acc, item) => acc + item);
+  }
 
   return (
     <>
@@ -12,7 +17,7 @@ export const BasketIcon = () => {
         <FaBagShopping />
       </Link>
 
-      <span>{state.items.length}</span>
+      <span>{sumArr}</span>
     </>
   );
 };
