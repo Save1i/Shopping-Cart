@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Shop url={"https://fakestoreapi.com/products"} />
+      <Shop url={"https://api.escuelajs.co/api/v1/products"} />
     </div>
   );
 }
