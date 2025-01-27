@@ -1,0 +1,18 @@
+.basket__icon {
+  height: 30px;
+  width: 30px;
+  color: black;
+}
+
+.basket__link {
+  position: relative;
+}
+
+.basket__items {
+  position: absolute;
+  contain: "";
+  top: -10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}

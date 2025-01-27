@@ -29,11 +29,13 @@ const ProductCard = ({ product, qty }) => {
     <div className={styles.card}>
       <img className={styles.card__img} src={images} alt={title} />
       <h2 className={styles.card__title}>{title}</h2>
-      <p className={styles.card__price}>{price}</p>
-      <p className={styles.card__subtotal}>{subtotal}</p>
-      <p className={styles.card__qty}>{qty}</p>
-      <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
-      <DeleteToItemBtn id={id} />
+      <p className={styles.card__price}>${price}</p>
+      <div className={styles.qty__container}>
+        <p className={styles.qty__text}>{qty}</p>
+        <DeleteToItemBtn id={id} />
+        <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
+      </div>
+      <p className={styles.card__subtotal}>${subtotal}</p>
       <RemoveToCardBtn id={id} />
     </div>
   );

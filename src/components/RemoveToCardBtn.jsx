@@ -1,5 +1,7 @@
 import React from "react";
 import { useCart } from "../hooks/CartContext";
+import { ImBin } from "react-icons/im";
+import styles from "../styles/changeItemCount.module.css";
 
 export const RemoveToCardBtn = ({ id }) => {
   const { dispatch } = useCart();
@@ -9,5 +11,9 @@ export const RemoveToCardBtn = ({ id }) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: id });
   };
 
-  return <button onClick={handleAddToCart}>DELETET</button>;
+  return (
+    <button className={styles.delete__item} onClick={handleAddToCart}>
+      <ImBin className={styles.delete__icon} />
+    </button>
+  );
 };

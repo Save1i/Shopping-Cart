@@ -1,0 +1,57 @@
+.card {
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.card__img {
+  height: 100px;
+  max-width: 90px;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 300;
+  width: 130px;
+  margin-left: 20px;
+}
+
+.card__price {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card__subtotal {
+}
+
+.qty__container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  font-variant-numeric: tabular-nums;
+}
+
+.qty__text {
+  width: 40px;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  color: rgb(69, 68, 68);
+  border: 1px solid gray;
+  margin-right: 5px;
+}
+
+.card__subtotal {
+  margin: 0 auto;
+  width: 60px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}

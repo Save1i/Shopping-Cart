@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../hooks/CartContext";
+import styles from "../styles/changeItemCount.module.css";
 
 export const DeleteToItemBtn = ({ id }) => {
   const { dispatch } = useCart();
@@ -9,5 +10,9 @@ export const DeleteToItemBtn = ({ id }) => {
     dispatch({ type: "DELETE_ITEM_FROM_CART", payload: id });
   };
 
-  return <button onClick={handleAddToCart}>-</button>;
+  return (
+    <button className={styles.delete__btn} onClick={handleAddToCart}>
+      -
+    </button>
+  );
 };
