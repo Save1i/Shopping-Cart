@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Занимает всю высоту экрана */
+  max-width: 500px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center; /* Текст по центру */
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.link {
+  background-color: black;
+  padding: 10px;
+  color: #fff;
+}
