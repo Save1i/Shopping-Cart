@@ -1,6 +1,6 @@
 .card {
   width: 273px;
-  height: 400px;
+  height: 420px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -14,21 +14,19 @@
 }
 
 .card__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
 }
 
 .card__price {
   font-size: 18px;
   font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card__text {
   text-align: center;
   margin-top: 10px;
   margin-bottom: auto;
-}
-
-.card__price {
-  margin-top: 5px;
 }
