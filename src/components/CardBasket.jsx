@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 // import { useCart } from "../hooks/CartContext";
 import { useCard } from "../hooks/useCard";
 import styles from "../styles/cardBasket.module.css";
 import { AddToCartBtn } from "./AddToCartBtn";
 import { DeleteToItemBtn } from "./DeleteToItemBtn";
 import { RemoveToCardBtn } from "./RemoveToCardBtn";
+import { Skeleton } from "@mui/material";
 
 export const CardBasket = ({ url, qty, onSubtotalChange }) => {
   const { products, error, loading } = useCard(url);
@@ -28,6 +29,10 @@ export const CardBasket = ({ url, qty, onSubtotalChange }) => {
 
 const ProductCard = ({ product, qty, onSubtotalChange }) => {
   const { title, price, images, id } = product;
+  const [imageError, setImageError] = useState(false);
+  const handleImageError = () => {
+    setImageError(true); // Устанавливаем состояние, если изображение не загружается
+  };
 
   // Рассчитываем сумму для текущего продукта
   const subtotal = qty * price;
@@ -42,7 +47,11 @@ const ProductCard = ({ product, qty, onSubtotalChange }) => {
   }, [id, subtotal, onSubtotalChange]);
   return (
     <div className={styles.card}>
-      <img className={styles.card__img} src={images} alt={title} />
+      {imageError ? (
+        <Skeleton sx={{ transform: "none" }} width={90} height={100} />
+      ) : (
+        <img className={styles.card__img} src={images} alt={title} onError={handleImageError} />
+      )}
       <h2 className={styles.card__title}>{title}</h2>
       <p className={styles.card__price}>${price}</p>
       <div className={styles.qty__container}>
