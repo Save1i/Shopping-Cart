@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  border-top: 2px solid #000;
+  margin-top: 30px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer__link:hover {
+  color: rgb(18, 20, 154);
+}
+
+.link__text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
