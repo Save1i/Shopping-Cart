@@ -1,0 +1,11 @@
+.card {
+  width: 273px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  margin-top: 15px;
+  margin-bottom: auto;
+}
