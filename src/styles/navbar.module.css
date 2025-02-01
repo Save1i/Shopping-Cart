@@ -1,5 +1,5 @@
 .navbar {
-  width: 1169px;
+  max-width: 1169px;
   margin: 0 auto;
   height: 80px;
   margin-bottom: 10px;
