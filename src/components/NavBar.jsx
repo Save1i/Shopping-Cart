@@ -14,7 +14,11 @@ export const Navbar = () => {
           </li>
           <li>about us</li>
         </ul>
-        <h1 className={styles.navbar__logo}>Participle+</h1>
+        <h1 className={styles.navbar__logo}>
+          <Link className={styles.navbar__link} to="/">
+            Participle+
+          </Link>
+        </h1>
         <ul className={styles.navbar__list}>
           <li>search</li>
           <BasketIcon url={"https://dummyjson.com/products"} />
