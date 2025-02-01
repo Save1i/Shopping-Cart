@@ -8,9 +8,9 @@ import { RemoveToCardBtn } from "./RemoveToCardBtn";
 import { Skeleton } from "@mui/material";
 
 export const CardBasket = ({ url, qty, onSubtotalChange }) => {
-  const { products, error, loading } = useCard(url);
+  const { products, loading, error } = useCard(url);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Skeleton height={100} sx={({ borderRadius: 1 }, { transform: "none" })} />;
   if (error) return <p>A network error was encountered</p>;
 
   return (
@@ -31,10 +31,9 @@ const ProductCard = ({ product, qty, onSubtotalChange }) => {
   const { title, price, images, id } = product;
   const [imageError, setImageError] = useState(false);
   const handleImageError = () => {
-    setImageError(true); // Устанавливаем состояние, если изображение не загружается
+    setImageError(true);
   };
 
-  // Рассчитываем сумму для текущего продукта
   const subtotal = qty * price;
 
   const prevSubtotalRef = useRef(null);
@@ -43,24 +42,26 @@ const ProductCard = ({ product, qty, onSubtotalChange }) => {
     if (onSubtotalChange && subtotal !== prevSubtotalRef.current) {
       onSubtotalChange(id, subtotal);
     }
-    prevSubtotalRef.current = subtotal; // Обновляем предыдущий subtotal
+    prevSubtotalRef.current = subtotal;
   }, [id, subtotal, onSubtotalChange]);
   return (
-    <div className={styles.card}>
-      {imageError ? (
-        <Skeleton sx={{ transform: "none" }} width={90} height={100} />
-      ) : (
-        <img className={styles.card__img} src={images} alt={title} onError={handleImageError} />
-      )}
-      <h2 className={styles.card__title}>{title}</h2>
-      <p className={styles.card__price}>${price}</p>
-      <div className={styles.qty__container}>
-        <p className={styles.qty__text}>{qty}</p>
-        <DeleteToItemBtn id={id} />
-        <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
+    <>
+      <div className={styles.card}>
+        {imageError ? (
+          <Skeleton sx={{ transform: "none" }} width={90} height={100} />
+        ) : (
+          <img className={styles.card__img} src={images} alt={title} onError={handleImageError} />
+        )}
+        <h2 className={styles.card__title}>{title}</h2>
+        <p className={styles.card__price}>{price}</p>
+        <div className={styles.qty__container}>
+          <p className={styles.qty__text}>{qty}</p>
+          <DeleteToItemBtn id={id} />
+          <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
+        </div>
+        <p className={styles.card__subtotal}>{subtotal}</p>
+        <RemoveToCardBtn id={id} />
       </div>
-      <p className={styles.card__subtotal}>${subtotal}</p>
-      <RemoveToCardBtn id={id} />
-    </div>
+    </>
   );
 };
