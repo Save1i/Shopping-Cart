@@ -1,4 +1,5 @@
 .card {
+  padding-right: 30px;
   display: flex;
   align-items: center;
   font-variant-numeric: tabular-nums;
