@@ -22,4 +22,12 @@ h3 {
   background-color: black;
   padding: 10px;
   color: #fff;
+  border: 1px solid #000;
+}
+
+.link:active {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  color: #000;
+  border: 1px solid #000;
 }
