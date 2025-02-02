@@ -6,8 +6,10 @@
 }
 
 .navbar__inner {
+  height: 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -18,6 +20,10 @@
   gap: 50px;
   font-weight: 400;
   font-size: 20px;
+}
+
+.basket__icon_burger {
+  display: none;
 }
 
 .navbar__list li {
@@ -50,4 +56,100 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 60px;
+}
+
+.burger {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.burger__icon {
+  height: 25px;
+  width: 25px;
+}
+
+.burger__list {
+  padding-top: 30px;
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+
+  top: 50px;
+  left: -150px;
+  transition: all 0.9s ease-in-out;
+
+  width: 0;
+  height: 100vh;
+  justify-content: start;
+  gap: 20px;
+
+  background: #e0e0e0;
+  color: #fff;
+  flex-direction: column;
+
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+}
+
+.basket__icon {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .basket__icon_burger {
+    display: flex;
+  }
+
+  .basket__icon {
+    display: block;
+  }
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar__logo {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0 auto;
+  }
+
+  .navbar__logo .navbar__link {
+    color: #000;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger__list li {
+    margin-left: 25px;
+    display: inline-flex;
+    font-size: 28px;
+  }
+
+  .navbar__link {
+    color: #fff;
+  }
+
+  .burger__list.burger__list_open {
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: start;
+    gap: 20px;
+    visibility: visible;
+    position: absolute;
+
+    top: 50px;
+    left: 0;
+    background: #000000;
+    color: #fff;
+    flex-direction: column;
+
+    text-align: center;
+  }
 }
