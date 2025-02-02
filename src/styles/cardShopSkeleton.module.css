@@ -9,3 +9,12 @@
   margin-top: 15px;
   margin-bottom: auto;
 }
+
+@media (max-width: 492px) {
+  .card {
+    width: 135px;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+  }
+}
