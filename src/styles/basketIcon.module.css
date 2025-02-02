@@ -10,9 +10,12 @@
 
 .basket__items {
   position: absolute;
-  contain: "";
-  top: -10px;
-  font-size: 18px;
+  content: "";
+  top: 17px;
+  left: 60%;
+  font-size: 12px;
   font-weight: 600;
-  color: black;
+  padding: 0 2px 0 2px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
