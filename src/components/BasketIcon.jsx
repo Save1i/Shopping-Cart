@@ -1,5 +1,5 @@
 import { useCart } from "../hooks/CartContext";
-import { FaBagShopping } from "react-icons/fa6";
+import { RiShoppingBagLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import styles from "../styles/basketIcon.module.css";
 
@@ -15,7 +15,7 @@ export const BasketIcon = () => {
   return (
     <>
       <Link to="/cart" className={styles.basket__link}>
-        <FaBagShopping className={styles.basket__icon} />
+        <RiShoppingBagLine className={styles.basket__icon} />
 
         <span className={styles.basket__items}>{sumArr}</span>
       </Link>
