@@ -1,11 +1,13 @@
 .shop {
-  width: 1169px;
+  max-width: 1210px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .shop__inner {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
 }

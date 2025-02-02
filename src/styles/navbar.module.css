@@ -1,5 +1,5 @@
 .navbar {
-  max-width: 1169px;
+  max-width: 1210px;
   margin: 0 auto;
   height: 80px;
   margin-bottom: 10px;
@@ -8,10 +8,13 @@
 .navbar__inner {
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navbar__list {
   display: flex;
+  align-items: center;
   gap: 50px;
   font-weight: 400;
   font-size: 20px;
