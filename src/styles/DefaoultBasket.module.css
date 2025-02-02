@@ -23,6 +23,7 @@ h3 {
   padding: 10px;
   color: #fff;
   border: 1px solid #000;
+  transition: all 0.3s ease;
 }
 
 .link:active {
