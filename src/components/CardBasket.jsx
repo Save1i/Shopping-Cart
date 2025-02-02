@@ -52,15 +52,17 @@ const ProductCard = ({ product, qty, onSubtotalChange }) => {
         ) : (
           <img className={styles.card__img} src={images} alt={title} onError={handleImageError} />
         )}
-        <h2 className={styles.card__title}>{title}</h2>
-        <p className={styles.card__price}>{price}</p>
-        <div className={styles.qty__container}>
-          <p className={styles.qty__text}>{qty}</p>
-          <DeleteToItemBtn id={id} />
-          <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
+        <div className={styles.card__text}>
+          <h2 className={styles.card__title}>{title}</h2>
+          <p className={styles.card__price}>{price}</p>
+          <div className={styles.qty__container}>
+            <p className={styles.qty__text}>{qty}</p>
+            <DeleteToItemBtn id={id} />
+            <AddToCartBtn id={id} text={"+"} className={"item__add-btn"} />
+          </div>
+          <p className={styles.card__subtotal}>{subtotal}</p>
+          <RemoveToCardBtn id={id} />
         </div>
-        <p className={styles.card__subtotal}>{subtotal}</p>
-        <RemoveToCardBtn id={id} />
       </div>
     </>
   );

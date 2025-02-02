@@ -12,10 +12,18 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+  margin-left: auto;
+  padding: 0;
 }
 
 .delete__icon {
   color: grey;
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 560px) {
+  .delete__item {
+    margin-top: 15px;
+  }
 }

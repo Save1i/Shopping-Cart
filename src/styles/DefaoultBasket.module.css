@@ -32,3 +32,13 @@ h3 {
   color: #000;
   border: 1px solid #000;
 }
+
+@media (max-width: 560px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
