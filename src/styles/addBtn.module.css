@@ -7,6 +7,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .card__add-btn:hover {
@@ -39,5 +40,19 @@
   .card__add-btn {
     padding: 8px 16px;
     font-size: 10px;
+  }
+}
+
+@media (hover: none) {
+  .card__add-btn:hover {
+    background-color: inherit;
+    color: inherit;
+    box-shadow: none;
+  }
+
+  .card__add-btn:active {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
