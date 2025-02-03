@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "../hooks/CartContext";
 import styles from "../styles/addBtn.module.css";
 
-export const AddToCartBtn = ({ id, text = "ADD TO CART", className = "card__add-btn" }) => {
+export const AddToCartBtn = ({ id, text = "ADD TO CART", className = "card__add_btn" }) => {
   const { dispatch } = useCart();
 
   const handleAddToCart = () => {

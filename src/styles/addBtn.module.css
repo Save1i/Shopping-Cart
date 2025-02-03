@@ -1,4 +1,4 @@
-.card__add-btn {
+.card__add_btn {
   color: #000;
   background-color: #fff;
   border: 1px solid #000;
@@ -10,7 +10,7 @@
   touch-action: manipulation;
 }
 
-.card__add-btn:active {
+.card__add_btn:active {
   background-color: #000000;
   color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -31,20 +31,20 @@
 }
 
 @media (max-width: 610px) {
-  .card__add-btn {
+  .card__add_btn {
     padding: 8px 16px;
     font-size: 10px;
   }
 }
 
 @media (hover: hover) {
-  .card__add-btn:hover {
+  .card__add_btn:hover {
     background-color: #c10c0c;
     color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .card__add-btn:active {
+  .card__add_btn:active {
     background-color: #ffffff;
     color: #000000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
