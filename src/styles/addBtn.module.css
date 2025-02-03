@@ -10,15 +10,9 @@
   touch-action: manipulation;
 }
 
-.card__add-btn:hover {
-  background-color: #000;
-  color: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 .card__add-btn:active {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,16 +37,16 @@
   }
 }
 
-@media (hover: none) {
+@media (hover: hover) {
   .card__add-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .card__add-btn:active {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
