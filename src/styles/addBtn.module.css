@@ -37,16 +37,16 @@
   }
 }
 
-@media (hover: hover) {
+@media (pointer: coarse) {
   .card__add_btn:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: inherit !important;
+    color: inherit !important;
+    box-shadow: none !important;
   }
 
   .card__add_btn:active {
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #000 !important;
+    color: #fff !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
   }
 }
