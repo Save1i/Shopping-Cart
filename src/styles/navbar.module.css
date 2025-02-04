@@ -71,6 +71,8 @@
 }
 
 .burger__list {
+  z-index: 10;
+
   padding-top: 30px;
   display: flex;
   visibility: hidden;
@@ -135,6 +137,8 @@
   }
 
   .burger__list.burger__list_open {
+    z-index: 10;
+
     padding-top: 30px;
     display: flex;
     width: 100%;
