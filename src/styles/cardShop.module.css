@@ -34,7 +34,7 @@
 @media (max-width: 610px) {
   .card {
     width: 135px;
-    height: 255px;
+    height: 237px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@
 
   .card__title {
     font-size: 11px;
+    height: 28px;
   }
 
   .card__price {
